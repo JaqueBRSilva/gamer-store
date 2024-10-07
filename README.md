@@ -74,6 +74,37 @@
         <a href="https://www.postgresql.org/" target="new-blank">
             PostgreSQL
         </a>
+        <span>
+            ou
+        </span>
+        <a href="https://hub.docker.com/_/postgres" target="new-blank">
+            Docker PostgreSQL
+        </a>
+    </li>
+</ul>
+
+<h3>Mobile</h3>
+<ul type="square">
+    <li>
+        <a href="https://expo.dev/" target="new-blank">
+            Expo / React Native
+        </a>
+    </li>
+    <li>
+        <a
+            href="https://react-native-async-storage.github.io/async-storage/"
+            target="new-blank"
+        >
+            Async Storage
+        </a>
+    </li>
+    <li>
+        <a
+            href="https://reactnavigation.org/docs/bottom-tab-navigator"
+            target="new-blank"
+        >
+            React Navigation - Bottom Tabs
+        </a>
     </li>
 </ul>
 
