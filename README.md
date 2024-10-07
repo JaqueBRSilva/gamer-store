@@ -19,17 +19,40 @@
 
 <h2>✏️ SOBRE</h2>
 <p>
-	Sistema completo simulando um e-commerce com Frontend, Backend & Mobile.
+	Sistema completo simulando um e-commerce, com Frontend, Backend & Mobile.
 </p>
 
 <br />
 
-<h2>💻 DEMONSTRAÇÃO</h2>
-<ul type="circle">
-    <li>
-        Em Breve. . .
-    </li>
-</ul>
+<h2>🎨 Designs</h2>
+<div align="center">
+    <img
+        alt="página inicial do site"
+        src="https://live.staticflickr.com/65535/54050532975_c14c088452_o.png"
+        width="800"
+        height="100%"
+    />
+</div>
+<h3>
+    <ul type="circle">
+        <li>
+            <a
+                href="https://www.figma.com/design/cxjnuTDmUudxeRLHUOSMzR/Gam3rStore"
+                target="new-blank"
+            >
+                Ver Design - Web
+            </a>
+        </li>
+        <li>
+            <a
+                href="https://www.figma.com/design/KLiEPVW0sq5QJOqoJROruC/Gam3rStore---Mobile"
+                target="new-blank"
+            >
+                Ver Design - Mobile
+            </a>
+        </li>
+    </ul>
+</h3>
 
 <br />
 
