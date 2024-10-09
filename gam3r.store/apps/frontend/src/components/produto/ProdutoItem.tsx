@@ -1,5 +1,7 @@
 'use client'
 
+import useCarrinho from '@/data/hooks/useCarrinho'
+import useParcelamento from '@/data/hooks/useParcelamento'
 import { Moeda, Produto } from '@gstore/core'
 import { IconShoppingCartPlus } from '@tabler/icons-react'
 import Image from 'next/image'
@@ -12,6 +14,8 @@ export interface ProdutoItemProps {
 
 export default function ProdutoItem(props: ProdutoItemProps) {
     const { produto } = props
+    const { adicionarItem } = useCarrinho()
+    const parcelamento = useParcelamento(props.produto.precoPromocional)
 
     return (
         <Link
@@ -21,6 +25,7 @@ export default function ProdutoItem(props: ProdutoItemProps) {
             <div className="absolute flex justify-end top-2.5 right-2.5">
                 <NotaReview nota={props.produto.nota} />
             </div>
+
             <div className="w-full h-48 relative">
                 <Image
                     src={produto.imagem}
@@ -43,12 +48,12 @@ export default function ProdutoItem(props: ProdutoItemProps) {
                     <span className="text-xl font-semibold text-emerald-400">
                         por {Moeda.formatar(produto.precoPromocional)}
                     </span>
-                    {/* <span className="text-zinc-400 text-xs">
+                    <span className="text-zinc-400 text-xs">
                         até {parcelamento.qtdeParcelas}x de{' '}
                         {Moeda.formatar(parcelamento.valorParcela)}
-                    </span> */}
+                    </span>
                 </div>
-                
+
                 <button
                     className="
                       flex justify-center items-center gap-2 h-8
@@ -56,8 +61,7 @@ export default function ProdutoItem(props: ProdutoItemProps) {
                     "
                     onClick={(e) => {
                         e.preventDefault()
-                        console.log('Adicionar ao carrinho')
-                        // adicionarItem(props.produto)
+                        adicionarItem(props.produto)
                     }}
                 >
                     <IconShoppingCartPlus size={20} />

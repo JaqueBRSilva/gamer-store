@@ -12,6 +12,7 @@ export default function TituloProduto(props: TituloProdutoProps) {
             <div className="text-2xl">
                 {produto?.nome}
             </div>
+
             <div className="font-light text-zinc-400">
                 {produto?.descricao}
             </div>

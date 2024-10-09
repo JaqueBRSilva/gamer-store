@@ -1,12 +1,11 @@
 'use client'
 
-import { produtos } from '@gstore/core'
-// import useProdutos from '@/data/hooks/useProdutos'
+import useProdutos from '@/data/hooks/useProdutos'
 import ProdutoItem from './ProdutoItem'
 import ProdutoNaoEncontrado from './ProdutoNaoEncontrado'
 
 export default function ListaProdutos() {
-    // const { produtos } = useProdutos()
+    const { produtos } = useProdutos()
 
     return produtos.length ? (
         <div
@@ -21,7 +20,7 @@ export default function ListaProdutos() {
 
     ) : (
 
-        <ProdutoNaoEncontrado semBotaVoltar />
-        
+        <ProdutoNaoEncontrado semBotaoVoltar />
+
     )
 }

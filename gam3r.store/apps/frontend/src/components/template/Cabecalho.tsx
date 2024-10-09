@@ -1,11 +1,12 @@
+'use client'
+
+import useCarrinho from '@/data/hooks/useCarrinho'
 import Link from 'next/link'
 import IconeCarrinho from '../shared/IconeCarrinho'
 import Logo from '../shared/Logo'
-// import useCarrinho from '@/data/hooks/useCarrinho'
 
 export default function Cabecalho() {
-    const qtdeItens = 0
-    // const { qtdeItens } = useCarrinho()
+    const { qtdeItens } = useCarrinho()
 
     return (
         <div
@@ -17,13 +18,11 @@ export default function Cabecalho() {
             <div className="flex-1 container flex flex-col justify-center">
                 <div className="flex justify-between items-center">
                     <Logo />
-
                     <Link href="/checkout/carrinho">
                         <IconeCarrinho qtdeItens={qtdeItens} />
                     </Link>
                 </div>
             </div>
-
             <div className="h-px bg-gradient-to-r from-violet-600/20 via-violet-600/80 to-violet-600/20"></div>
         </div>
     )

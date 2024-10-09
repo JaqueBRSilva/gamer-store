@@ -2,7 +2,7 @@ import { IconDevicesPcOff } from '@tabler/icons-react'
 import Link from 'next/link'
 
 export interface ProdutoNaoEncontradoProps {
-    semBotaVoltar?: boolean
+    semBotaoVoltar?: boolean
 }
 
 export default function ProdutoNaoEncontrado(props: ProdutoNaoEncontradoProps) {
@@ -14,7 +14,7 @@ export default function ProdutoNaoEncontrado(props: ProdutoNaoEncontradoProps) {
                 Produto não encontrado
             </span>
 
-            {!props.semBotaVoltar && (
+            {!props.semBotaoVoltar && (
                 <Link href="/" className="button bg-violet-700 text-white mt-5">
                     Voltar
                 </Link>
